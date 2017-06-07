@@ -41,9 +41,10 @@ class ViewController: UIViewController {
     
     //タブをタップした時に表示するViewControllerを設定する
     let homeViewController = storyboard?.instantiateViewController(withIdentifier: "Home")
-    _ = storyboard?.instantiateViewController(withIdentifier: "Setting")
+    let settingViewController = storyboard?.instantiateViewController(withIdentifier: "Setting")
     
     tabBarController.setView(homeViewController, at: 0)
+    tabBarController.setView(settingViewController, at: 2)
     tabBarController.setAction({
       //ボタンが押されたらImageViewControllerをモーダルで表示する
       let imageViewController = self.storyboard?.instantiateViewController(withIdentifier: "ImageSelect")
